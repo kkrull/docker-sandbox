@@ -68,10 +68,19 @@ Consul uses a bunch of ports:
 
 - 8500: REST API
 - 8600: DNS server
+- All the other ones listed in the `Dockerfile`
+
+Note that the consul REST server only seems to accept connections on `localhost`:
+
+    vagrant$ docker run -d -P --name consul consul_server
+    vagrant$ docker exec -it consul /bin/bash
+    # curl localhost:8500
+    Consul Agent
+    # curl 172.17.0.3:8500
+    curl: (7) Failed to connect to 172.17.0.3 port 8500: Connection refused
 
 Some more links that are helpful in learning consul:
 
 - [Key Value](https://www.consul.io/intro/getting-started/kv.html) store.
 - [Consul introduction](http://blog.scottlowe.org/2015/02/06/quick-intro-to-consul/)
-
 
