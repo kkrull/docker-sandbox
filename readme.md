@@ -82,5 +82,6 @@ Note that the consul REST server only seems to accept connections on `localhost`
 Some more links that are helpful in learning consul:
 
 - [Key Value](https://www.consul.io/intro/getting-started/kv.html) store.
-- [Consul introduction](http://blog.scottlowe.org/2015/02/06/quick-intro-to-consul/)
+- A quick blog post [Consul introduction](http://blog.scottlowe.org/2015/02/06/quick-intro-to-consul/) that breaks it
+  all down while avoiding marketing hype.
 
