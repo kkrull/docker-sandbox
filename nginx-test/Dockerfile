@@ -1,5 +1,4 @@
 FROM cloudfoundry/trusty64
-MAINTAINER Kyle Krull <kyle.krull@here.com>
 
 RUN apt-get -y update \
   && apt-get install -y nginx
