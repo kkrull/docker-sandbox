@@ -1,0 +1,15 @@
+#!/bin/bash
+
+#Run the container using the entry point command with our own arguments
+#to start in single-node developer mode:
+#https://www.consul.io/intro/getting-started/agent.html
+docker run -d \
+  -p 8300:8300 \
+  -p 8301:8301 \
+  -p 8302:8302 \
+  -p 8400:8400 \
+  -p 8500:8500 \
+  -p 8600:8600 \
+  --name consul_server \
+  consul-server agent -dev
+
